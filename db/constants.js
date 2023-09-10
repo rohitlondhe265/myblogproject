@@ -1,3 +1,3 @@
 "use client";
 
-export const apiBaseUrl = "https://careerblogapi.vercel.app";
+export const apiBaseUrl = "https://blogmongodbapi.vercel.app";

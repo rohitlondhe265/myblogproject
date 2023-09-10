@@ -3,10 +3,11 @@
 import Link from "next/link";
 import { useSession } from "next-auth/react";
 import ThemeButton from "./ThemeButton";
-import { CircleStackIcon, UserCircleIcon } from "@heroicons/react/24/solid";
+import { UserCircleIcon } from "@heroicons/react/24/solid";
 import { useEffect, useState } from "react";
 import { apiBaseUrl } from "@/db/constants";
 import axios from "axios";
+import Image from "next/image";
 
 export default function Header() {
   const session = useSession();
@@ -25,11 +26,11 @@ export default function Header() {
     }
   };
   return (
-    <header className="text-base md:bg-skin-on-fill md:p-2">
+    <header className="text-base md:bg-skin-on-fill md:p-1">
       <div className="flex flex-wrap flex-col md:flex-row items-center">
-        <div className="px-2 py-1 bg-skin-on-fill flex justify-around md:justify-between items-center w-full md:w-1/2">
+        <div className="md:ml-9 p-1 bg-skin-on-fill flex justify-around md:justify-between items-center w-full md:w-1/2">
           <Link href="/" className=" flex gap-6 font-medium items-center">
-            <span className="text-xl">Career Pages</span>
+            <Image src="/logo.png" width={150} height={75} />
           </Link>
           <div className="flex items-center justify-center space-x-3">
             <ThemeButton />

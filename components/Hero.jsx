@@ -8,15 +8,15 @@ export default function Hero() {
       <div className="container mx-auto flex px-5 md:flex-row flex-col items-center">
         <div className="md:flex-grow md:w-1/2 md:pr-24 mb-6 flex flex-col md:items-start md:text-left items-center text-center">
           <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium">
-            Before they sold out
+            Exploring Chemical Engineering:
             <br className="hidden md:inline-block" />
-            readymade gluten
+            Catalyst for Careers and Preparation Guide
           </h1>
           <p className="mb-3 md:mb-6 leading-relaxed">
-            Copper mug try-hard pitchfork pour-over freegan heirloom neutra air
-            plant cold-pressed tacos poke beard tote bag. Heirloom echo park
-            mlkshk tote bag selvage hot chicken authentic tumeric truffaut
-            hexagon try-hard chambray.
+            Our blog is your gateway to the captivating world of chemical
+            engineering, where knowledge fuels careers and Passion. Discover the
+            vast landscape of chemical engineering, preparation guide, and the
+            endless career opportunities that await.
           </p>
           <div className="flex justify-center">
             <button className="inline-flex text-white bg-primary border-0 py-2 px-6 focus:outline-none hover:bg-skin-on-fill rounded text-lg">

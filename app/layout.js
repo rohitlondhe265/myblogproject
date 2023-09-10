@@ -4,6 +4,30 @@ import NextAuthProvider from "./NextAuthProvider";
 import ThemeProvider from "./ThemeProvider";
 import Footer from "@/components/Footer";
 import Script from "next/script";
+import ToastProvider from "./ToastProvider";
+
+const homepageKeywords = [
+  "Chemical Engineering",
+  "Technology Trends",
+  "Career Opportunities",
+  "Innovation in Engineering",
+  "Sustainable Practices",
+  "Chemical Processes",
+  "Engineering Insights",
+  "STEM Careers",
+  "Chemical Industry Updates",
+  "Science and Engineering",
+  "Career Guidance",
+  "Industrial Chemistry",
+  "Future of Technology",
+  "Engineering Education",
+  "Emerging Technologies",
+  "Chemical Innovations",
+  "Sustainable Engineering",
+  "Science Careers",
+  "Engineering News",
+  "Professional Development",
+];
 
 export const metadata = {
   metadataBase: new URL(`${process.env.BASE_URL}`),
@@ -67,6 +91,7 @@ export default function RootLayout({ children }) {
             </div>
           </ThemeProvider>
         </NextAuthProvider>
+        <ToastProvider />
       </body>
     </html>
   );
