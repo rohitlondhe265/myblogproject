@@ -5,6 +5,7 @@ import ThemeProvider from "./ThemeProvider";
 import Footer from "@/components/Footer";
 import Script from "next/script";
 import ToastProvider from "./ToastProvider";
+import GoogleAnalytics from "./GoogleAnalytics";
 
 const homepageKeywords = [
   "Chemical Engineering",
@@ -65,21 +66,10 @@ export default function RootLayout({ children }) {
           src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.GOOGLE_ADSENCE_ID}`}
           crossorigin="anonymous"
         />
-        <Script
-          strategy="afterInteractive"
-          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GTM_ID}`}
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', ${process.env.GTM_ID});
-    `}
-        </Script>
       </head>
 
       <body suppressHydrationWarning>
+        <GoogleAnalytics />
         <NextAuthProvider>
           <ThemeProvider>
             <div className="bg-skin-fill text-base min-h-screen">

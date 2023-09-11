@@ -1,6 +1,7 @@
 User-agent: *
 Disallow: 
 Disallow: /admin/
+Disallow: /api/
 Disallow: /login
 Disallow: /about-us
 Disallow: /contact-us
@@ -8,4 +9,4 @@ Disallow: /privacy-policy
 Disallow: /terms-and-conditions
 Disallow: /disclaimer
 Disallow: /user
-Sitemap: https://blog-client-phi.vercel.app/sitemap.xml
+Sitemap: https://www.careerpages.me/sitemap.xml
