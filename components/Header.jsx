@@ -30,7 +30,7 @@ export default function Header() {
       <div className="flex flex-wrap flex-col md:flex-row items-center">
         <div className="md:ml-9 p-1 bg-skin-on-fill flex justify-around md:justify-between items-center w-full md:w-1/2">
           <Link href="/" className=" flex gap-6 font-medium items-center">
-            <Image src="/logo.png" width={150} height={75} />
+            <Image src="/logo.png" alt="Career Pages" width={150} height={75} />
           </Link>
           <div className="flex items-center justify-center space-x-3">
             <ThemeButton />

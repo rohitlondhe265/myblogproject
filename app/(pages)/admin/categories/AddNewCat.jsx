@@ -36,8 +36,6 @@ const AddNewCat = ({
     }
   };
   const handleSubmit = async () => {
-    // if(formData.id) console.log("Yes")
-    console.log(formData);
     if (formData.id) {
       try {
         const res = await axios.put(`${apiBaseUrl}/api/category`, formData);

@@ -18,7 +18,6 @@ export default function Form() {
       ...formData,
       [name]: value,
     });
-    console.log(formData);
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -28,7 +27,7 @@ export default function Form() {
       setFormData({ name: "", email: "", message: "" });
       console.log(response);
     } catch (error) {
-      console.error("Error sending message:", error);
+      console.log(error);
       toast.error("An error occurred. Please try again later.");
     }
   };
