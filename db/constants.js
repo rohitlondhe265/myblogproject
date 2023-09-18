@@ -1,3 +1,3 @@
 "use client";
 
-export const apiBaseUrl = "http://localhost:8000";
+export const apiBaseUrl = "http://localhost:3001";

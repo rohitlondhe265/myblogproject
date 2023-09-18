@@ -15,6 +15,7 @@ export default function Sidebar() {
     { title: "Posts", slug: "posts" },
     { title: "Add New Post", slug: "add" },
     { title: "Categories", slug: "categories" },
+    { title: "FAQ", slug: "faqs" },
   ];
 
   return (

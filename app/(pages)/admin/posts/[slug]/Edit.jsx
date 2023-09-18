@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { apiBaseUrl } from "@/db/constants";
-// import MyEditor from "./MyEditor";
 import { Editor } from "@tinymce/tinymce-react";
 
 const Edit = ({ slug }) => {
@@ -32,17 +31,9 @@ const Edit = ({ slug }) => {
     fetchCategories();
   }, []);
 
-  // Update the editor content when the initialValue prop changes
-  // const initialValue = post.content;
-  // useEffect(() => {
-  //   setEditorContent(initialValue);
-  // }, [initialValue]);
-
   // Event handler for TinyMCE's onChange event
   const handleEditorChange = (content, editor) => {
     setPost({ ...post, content: content });
-    // You can optionally send this updated content back to the parent component
-    // or store it elsewhere.
   };
 
   const options = ["published", "draft"];
@@ -108,7 +99,7 @@ const Edit = ({ slug }) => {
             Content
           </label>
           <div className="editor overflow-scroll max-w-screen-md mx-auto p-4">
-            <Editor 
+            <Editor
               value={post.content}
               onEditorChange={handleEditorChange}
               apiKey="idw7xyxfre7k97232m8itu8o6z8mtog3ehj5vk8qax5gn33t"

@@ -3,6 +3,7 @@ import { apiBaseUrl } from "@/db/constants";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
+import FaqModel from "./FaqModel";
 
 const PostsTable = () => {
   const [posts, setPosts] = useState([]);
@@ -21,9 +22,9 @@ const PostsTable = () => {
     }
   };
 
-  const handleDelete = async (postId) => {
+  const handleDelete = async (slug) => {
     try {
-      await axios.delete(`${apiBaseUrl}/api/posts/${postId}`);
+      await axios.delete(`${apiBaseUrl}/api/posts/${slug}`);
       console.log("deleted");
     } catch (error) {
       console.error("Error creating new post:", error);
@@ -38,8 +39,6 @@ const PostsTable = () => {
           <thead>
             <tr>
               <th className="border px-3 py-2">Title</th>
-              <th className="border px-3 py-2">Date</th>
-              <th className="border px-3 py-2">Slug</th>
               <th className="border px-3 py-2">Category</th>
               <th className="border px-3 py-2">Actions</th>
             </tr>
@@ -48,8 +47,6 @@ const PostsTable = () => {
             {posts?.map((post, i) => (
               <tr key={i}>
                 <td className="border px-3 py-2">{post.title}</td>
-                <td className="border px-3 py-2">{post.updatedAt}</td>
-                <td className="border px-3 py-2">{post.slug}</td>
                 <td className="border px-3 py-2">{post.category?.title}</td>
                 <td className="border px-3 py-2">
                   <button
@@ -59,11 +56,14 @@ const PostsTable = () => {
                     Edit
                   </button>
                   <button
-                    onClick={() => handleDelete(post._id)}
+                    onClick={() => handleDelete(post.slug)}
                     className="text-error"
                   >
                     Delete
                   </button>
+                </td>
+                <td className="border px-3 py-2">
+                  <FaqModel postId={post._id} />
                 </td>
               </tr>
             ))}
