@@ -26,7 +26,7 @@ export default function BlogPostCard({
         >
           {title}
         </Link>
-        <p className="text-muted">{metaDescription}</p>
+        <p className="text-muted">{metaDescription.substring(0, 60)}</p>
       </div>
     </div>
   );

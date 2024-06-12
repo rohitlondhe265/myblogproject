@@ -48,7 +48,7 @@ export default function Header() {
             )}
           </div>
         </div>
-        <nav className="px-2 md:ml-12 bg-primary md:bg-inherit space-x-3 flex flex-wrap items-center justify-center w-full md:w-auto">
+        <nav className="px-2 font-semibold md:ml-12 bg-primary md:bg-inherit space-x-3 flex flex-wrap items-center justify-center w-full md:w-auto">
           {/* <Link
             href="/posts"
             className="hover:text-gray-300 cursor-pointer text-lg"
