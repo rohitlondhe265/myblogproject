@@ -8,15 +8,12 @@ export default function Hero() {
       <div className="container mx-auto flex px-5 md:flex-row flex-col items-center">
         <div className="md:flex-grow md:w-1/2 md:pr-24 mb-6 flex flex-col md:items-start md:text-left items-center text-center">
           <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium">
-            Exploring Chemical Engineering:
+            Exploring Software Engineering:
             <br className="hidden md:inline-block" />
-            Catalyst for Careers and Preparation Guide
+            Pointer for Careers and Preparation Guide
           </h1>
           <p className="mb-3 md:mb-6 leading-relaxed">
-            Our blog is your gateway to the captivating world of chemical
-            engineering, where knowledge fuels careers and Passion. Discover the
-            vast landscape of chemical engineering, preparation guide, and the
-            endless career opportunities that await.
+            Your go-to resource for coding tips, tech insights, and software engineering best practices. Whether you're a novice or a pro, find inspiration and knowledge to fuel your development journey.
           </p>
           <div className="flex justify-center">
             <button className="inline-flex text-white bg-primary border-0 py-2 px-6 focus:outline-none hover:bg-skin-on-fill rounded text-lg">
